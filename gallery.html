@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Oasis Gallery | Dude in the Desert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff007f;
+            --neon-cyan: #00f3ff;
+            --neon-yellow: #ccff00;
+            --desert-night: #0a0510;
+        }
+
+        body {
+            background-color: var(--desert-night);
+            color: #fff;
+            font-family: 'Space Mono', monospace;
+            margin: 0;
+            padding: 40px 20px;
+            background-image: 
+                linear-gradient(rgba(255, 0, 127, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 0, 127, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-family: 'Righteous', cursive;
+            font-size: 3rem;
+            color: var(--neon-cyan);
+            text-shadow: 2px 2px 0px var(--neon-pink), 4px 4px 10px var(--neon-cyan);
+            text-transform: uppercase;
+        }
+
+        /* The Neon Art Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .art-piece {
+            background: rgba(10, 5, 16, 0.8);
+            border: 2px solid var(--neon-yellow);
+            border-radius: 15px 50px 15px 50px; /* Googie asymmetry */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(204, 255, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .art-piece:hover {
+            transform: scale(1.05) skew(-2deg);
+            box-shadow: 0 0 25px var(--neon-pink);
+            border-color: var(--neon-pink);
+        }
+
+        .art-placeholder {
+            background: #1a1a1a;
+            height: 250px;
+            border-radius: 10px 30px 10px 30px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-style: italic;
+        }
+
+        h3 {
+            color: var(--neon-yellow);
+            margin: 10px 0 5px 0;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 30px;
+            color: var(--desert-night);
+            background-color: var(--neon-cyan);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px var(--neon-cyan);
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: transparent;
+            color: var(--neon-cyan);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inside the Mirage</h1>
+        <p>Bold Lines. Neon Nights. Geometric Structures.</p>
+    </header>
+
+    <div class="gallery-grid">
+        <!-- Placeholder 1 -->
+        <div class="art-piece">
+            <div class="art-placeholder">[Surreal Desert Landscape Image]</div>
+            <h3>Palm Springs Void</h3>
+            <p>Digital painting • 2026</p>
+        </div>
+        <!-- Placeholder 2 -->
+        <div class="art-piece">
+            <div class="art-placeholder">[The Ultimate Tarot Card Image]</div>
+            <h3>The Fool - Tarot Guide</h3>
+            <p>Vector line art • 2026</p>
+        </div>
+        <!-- Placeholder 3 -->
+        <div class="art-piece">
+            <div class="art-placeholder">[Googie Geometric Image]</div>
+            <h3>Mid-Century Study</h3>
+            <p>Mixed media • 2026</p>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="index.html" class="back-button">Return to the Desert</a>
+    </div>
+</body>
+</html>
